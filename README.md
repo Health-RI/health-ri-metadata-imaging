@@ -18,3 +18,17 @@ Newly introduced classes:
   - ScanProtocol describes the protocol used for one or multiple acquisitions (slices) using the same parameters on a patient, as part of an imaging session. This corresponds to the level of a DICOM Series.
   - Subclass of Procedure (http://semanticscience.org/resource/SIO_000999)
   - For CT, MR and PET scans, ScanProtocol can be subclassed into CTScanProtocol, MRScanProtocol and PETScanProtocol respectively. For other imaging modalities the generic case can be used.
+
+# Development
+
+Any questions and other issues can be submitted through 'Issues'. If you are inclined to suggest changes yourself,
+please check in with the maintainers first through an Issue. All Pull requests are welcome, but there is no guarantee
+that your changes will be integrated. 
+
+## Script 'split-csv'
+In order to both give uses the accessibility of modifying a single Excel file when developing the model, and 
+to give insights in the changes, a script 'split-csv' has been added. 
+After committing a change in the Excel file 'Health-RI Imaging Metadata model {version}.xlsx', a Github Actions
+workflow will run and split each sheet into a separate CSV file. These files will be added to the folder 'csv' 
+and committed. The new commit will be called 'split-csv: {title of original commit}' and can be used to see 
+the changes.
