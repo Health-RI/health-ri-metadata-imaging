@@ -9,4 +9,4 @@ CTScanProtocol,hri:CTScanProtocol,An ScanProtocol for CT imaging.,sio:SIO_000999
 MRScanProtocol,hri:CTScanProtocol,An ScanProtocol for MR imaging.,sio:SIO_000999,hri:ScanProtocol,,,SIO.SIO_000999
 CTScanProtocol,hri:CTScanProtocol,An ScanProtocol for PET imaging.,sio:SIO_000999,hri:ScanProtocol,,,SIO.SIO_000999
 PeriodOfTime,hri:PeriodOfTime,,dct:PeriodOfTime,,,https://www.w3.org/TR/vocab-dcat-3/#Class:Period_of_Time,DCTERMS.PeriodOfTime
-QuantitativeValue,hri:QuantitativeValue,,schema:QuantitativeValue,,,,SCHEMA.QuantitativeValue
+QuantitativeValue,hri:QuantitativeValue,Object to display the minimum and maximum value of a property.,schema:QuantitativeValue,,,,SCHEMA.QuantitativeValue
