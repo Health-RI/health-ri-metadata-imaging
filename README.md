@@ -1,6 +1,9 @@
 # Health-RI Imaging metadata model
 
-> This repository on imaging metadata is work in progress. For the official Health-RI metadata model v2 for
+> [!WARNING]
+> This repository on imaging metadata is work in progress. All URIs that are mentioned, especially those in the `hri` namespace
+> not present in the Health-RI v2 core model, can and will change.
+> For the official Health-RI metadata model v2 for
 > general health data, see the following GitHub repository: [Health-RI metadata](https://github.com/Health-RI/health-ri-metadata).
  
 This metadata model is intended to better describe imaging datasets with the purpose of increasing findability in a catalogue. The metadata will therefore be on an dataset, i.e., aggregated, level. For this initial version, the scope of this model has been limited to radiological imaging data; other imaging disciplines, e.g., pathology and opthamology, and derived data were not included in this version.
