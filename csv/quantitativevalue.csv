@@ -1,0 +1,3 @@
+Property label,Definition,Property URI,Controlled vocabluary (if applicable),Usage note,Requirement level,Range,Cardinality,Source of constraint,Value,SHACL_dash:viewer,SHACL_dash:editor,SHACL_sh:node,SHACL_sh:uniqueLang,SHACL_pattern,SHACL_default_value,SeMPyRO_rdf_term,SeMPyRO_rdf_type,SeMPyRO_range
+maxValue,The upper value of some characteristic or property. ,schema:maxValue,,,Mandatory,schema:Number,1,,,,,,,,,,,
+minValue,The lower value of some characteristic or property. ,schema:minValue,,,Mandatory,schema:Number,1,,,,,,,,,,,

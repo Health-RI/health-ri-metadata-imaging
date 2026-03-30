@@ -1,0 +1,5 @@
+Property label,Definition,Property URI,Controlled vocabluary (if applicable),Usage note,Requirement level,Range,Cardinality,Source of constraint,Value,SHACL_dash:viewer,SHACL_dash:editor,SHACL_sh:node,SHACL_sh:uniqueLang,SHACL_pattern,SHACL_default_value,SeMPyRO_rdf_term,SeMPyRO_rdf_type,SeMPyRO_range
+CTSequence,CT scanning sequence used as part of this scan protocol.,,,"Vocabulary to be determined, for example: Localizer, dynamic, normal, angiography, perfusion, etc. ",Mandatory,,1,,,,,,,,,,,
+reconstructionKernel,Reconstruction kernel used as part of this scan protocol.,,,,Mandatory,,1..n,,,,,,,,,,,
+tubeVoltageRange,Minimum and maximum value of the tube voltage in kiloVolt.,,,,Recommended,schema:QuantitativeValue,0..1,,,,,,,,,,,
+doseRange,Minimum and maximum value of the radiation dose in milliSievert.,,,,Recommended,schema:QuantitativeValue,0..1,,,,,,,,,,,

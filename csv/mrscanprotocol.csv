@@ -1,0 +1,4 @@
+Property label,Definition,Property URI,Controlled vocabluary (if applicable),Usage note,Requirement level,Range,Cardinality,Source of constraint,Value,SHACL_dash:viewer,SHACL_dash:editor,SHACL_sh:node,SHACL_sh:uniqueLang,SHACL_pattern,SHACL_default_value,SeMPyRO_rdf_term,SeMPyRO_rdf_type,SeMPyRO_range
+MRISequence,MR contrast sequence used as part of this scan protocol.,,,"Vocabulary to be determined, for example: Functional, structural, perfusion, diffusion, etc. or T1-weighted, T2-weighted, FLAIR etc.",Mandatory,,1,,,,,,,,,,,
+sliceThicknessRange,"Minimum and maximum value of the slice thickness in millimeters. See DICOM tag (0018, 0050) Slice Thickness ",,,,Recommended,schema:QuantitativeValue,0..1,,,,,,,,,,,
+interSliceDistanceRange,"Minimum and maximum value of the inter-slice distance in millimeters. See DICOM tag (0018, 0088) Spacing Between Slices ",,,,Recommended,schema:QuantitativeValue,0..1,,,,,,,,,,,
