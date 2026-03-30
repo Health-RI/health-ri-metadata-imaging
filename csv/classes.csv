@@ -1,10 +1,10 @@
 sheet_name,class_URI,description,SHACL_target_ontology_name,SeMPyRO_inherits_from,SeMPyRO_import_classes,SeMPyRO_annotations_ontology,SeMPyRO_annotations_IRI
 Imaging Dataset,hri:ImagingDataset,An extension of dcat:Dataset with imaging specific properties.,dcat:Dataset,hri:Dataset,,,DCAT.Dataset
-ImagingSessionProtocol,hri:ImagingSessionProtocol,An ImagingSessionProtocol describes a protocol used for creating the imaging sessions in this dataset. An imaging session is defined as an event which clinically would result in one report. An imaging session consists of one or more scans.,sio:SIO_000999,,,,SIO.SIO_000999
+ImagingSessionProtocol,hri:ImagingSessionProtocol,An ImagingSessionProtocol describes a protocol used for creating the imaging sessions in this dataset. An imaging session is defined as an event which clinically would result in one report. An imaging session consists of one or more scans. This corresponds to the level of a DICOM Study.,sio:SIO_000999,,,,SIO.SIO_000999
 CTImagingSessionProtocol,hri:CTImagingSessionProtocol,An ImagingSessionProtocol for CT imaging.,sio:SIO_000999,hri:ImagingSessionProtocol,,,SIO.SIO_000999
 MRImagingSessionProtocol,hri:MRImagingSessionProtocol,An ImagingSessionProtocol for MR imaging.,sio:SIO_000999,hri:ImagingSessionProtocol,,,SIO.SIO_000999
 PETImagingSessionProtocol,hri:PETImagingSessionProtocol,An ImagingSessionProtocol for PET imaging.,sio:SIO_000999,hri:ImagingSessionProtocol,,,SIO.SIO_000999
-ScanProtocol,hri:ScanProtocol,"ScanProtocol describes the protocol used for one or multiple acquisitions (slices) using the same parameters on a patient, as part of an imaging session.",sio:SIO_000999,,,,SIO.SIO_000999
+ScanProtocol,hri:ScanProtocol,"ScanProtocol describes the protocol used for one or multiple acquisitions (slices) using the same parameters on a patient, as part of an imaging session. This corresponds to the level of a DICOM Series.",sio:SIO_000999,,,,SIO.SIO_000999
 CTScanProtocol,hri:CTScanProtocol,An ScanProtocol for CT imaging.,sio:SIO_000999,hri:ScanProtocol,,,SIO.SIO_000999
 MRScanProtocol,hri:CTScanProtocol,An ScanProtocol for MR imaging.,sio:SIO_000999,hri:ScanProtocol,,,SIO.SIO_000999
 CTScanProtocol,hri:CTScanProtocol,An ScanProtocol for PET imaging.,sio:SIO_000999,hri:ScanProtocol,,,SIO.SIO_000999
