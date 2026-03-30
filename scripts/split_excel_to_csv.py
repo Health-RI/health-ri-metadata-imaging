@@ -3,7 +3,6 @@
 
 import csv
 import re
-import shutil
 from pathlib import Path
 
 import openpyxl
@@ -20,16 +19,16 @@ def sanitize_sheet_name(name: str) -> str:
 
 
 def main():
-    if OUTPUT_DIR.exists():
-        shutil.rmtree(OUTPUT_DIR)
-    OUTPUT_DIR.mkdir()
+    OUTPUT_DIR.mkdir(exist_ok=True)
 
     wb = openpyxl.load_workbook(EXCEL_FILE, read_only=True, data_only=True)
 
+    written_files = set()
     for sheet_name in wb.sheetnames:
         ws = wb[sheet_name]
         csv_name = sanitize_sheet_name(sheet_name) + ".csv"
         csv_path = OUTPUT_DIR / csv_name
+        written_files.add(csv_path)
 
         with open(csv_path, "w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
@@ -39,6 +38,13 @@ def main():
         print(f"  {sheet_name} -> {csv_path}")
 
     wb.close()
+
+    # Remove stale CSVs from deleted/renamed sheets
+    for existing in OUTPUT_DIR.glob("*.csv"):
+        if existing not in written_files:
+            existing.unlink()
+            print(f"  Removed stale: {existing}")
+
     print(f"Done. Wrote {len(wb.sheetnames)} CSV files to {OUTPUT_DIR}/")
 
 
