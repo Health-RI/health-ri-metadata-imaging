@@ -8,3 +8,13 @@ This metadata model is intended to better describe imaging datasets with the pur
 This model is designed to be an extension of the Health-RI v2 metadata model, currently the most recent version is [version 2.0.2](https://github.com/Health-RI/health-ri-metadata/tree/v2.0.2).
 
 ![](./Imaging%20Metadata%20Model.png)
+
+Newly introduced classes:
+- ImagingSessionProtocol
+  - An ImagingSessionProtocol describes a protocol used for creating the imaging sessions in this dataset. An imaging session is defined as an event which clinically would result in one report. An imaging session consists of one or more scans. This corresponds to the level of a DICOM Study.
+  - Subclass of Procedure (http://semanticscience.org/resource/SIO_000999)
+  - For CT, MR and PET scans, ImagingSessionProtocol can be subclassed into CTImagingSessionProtocol, MRImagingSessionProtocol and PETImagingSessionProtocol respectively. For other imaging modalities the generic case can be used.
+- ScanProtocol
+  - ScanProtocol describes the protocol used for one or multiple acquisitions (slices) using the same parameters on a patient, as part of an imaging session. This corresponds to the level of a DICOM Series.
+  - Subclass of Procedure (http://semanticscience.org/resource/SIO_000999)
+  - For CT, MR and PET scans, ScanProtocol can be subclassed into CTScanProtocol, MRScanProtocol and PETScanProtocol respectively. For other imaging modalities the generic case can be used.
